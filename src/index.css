@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root{
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+  --font-arabic: "Amiri", "Noto Naskh Arabic", serif;
+}
+html{
+  font-family: var(--font-ui), var(--font-arabic);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.arabic-text{ font-family: var(--font-arabic); font-size: 1.25rem; line-height: 2; }
+
+a { text-decoration: none }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid rgb(5 150 105); outline-offset: 2px; } /* emerald-600 */
