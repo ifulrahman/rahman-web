@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api", "destination": "https://doa-doa-api-ahmadramadhan.fly.dev/api" },
+    { "source": "/api/:path*", "destination": "https://doa-doa-api-ahmadramadhan.fly.dev/api/:path*" }
+  ]
+}

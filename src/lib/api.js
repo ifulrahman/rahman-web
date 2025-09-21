@@ -1,15 +1,7 @@
 import axios from "axios";
 
-const base = (
-  import.meta.env.PROD && import.meta.env.VITE_API_BASE
-    ? String(import.meta.env.VITE_API_BASE)
-    : ""
-).replace(/\/+$/, ""); 
-
-const http = axios.create({
-  baseURL: base,
-  timeout: 15000,
-});
+// baseURL kosong -> pakai path relatif "/api" (dev via proxy Vite, prod via rewrite Vercel)
+const http = axios.create({ baseURL: "", timeout: 15000 });
 
 http.interceptors.response.use(
   (r) => r,
